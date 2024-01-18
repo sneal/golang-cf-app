@@ -5,6 +5,6 @@ A very basic web application that is Cloud Foundry service binding aware. This a
 ## Usage
 
 ```bash
-$ go build .
+$ GOOS=linux GOARCH=amd64 go build .
 $ cf push
 ```
