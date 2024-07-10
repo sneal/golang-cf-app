@@ -64,6 +64,12 @@ func index(w http.ResponseWriter, r *http.Request) {
 			out(w, "<p>volume mounts: %v</p>", p.VolumeMounts)
 		}
 	}
+
+	out(w, "<h2>Remote Addr:</h2>")
+	out(w, "<p>request remote addr: %s</p>", r.RemoteAddr)
+	out(w, "<p>X-Forwarded-For: %s</p>", r.Header.Get("X-Forwarded-For"))
+	out(w, "<p>X-Real-IP: %s</p>", r.Header.Get("X-Real-IP"))
+	out(w, "<p>X-Forwarded-Proto: %s</p>", r.Header.Get("X-Forwarded-Proto"))
 }
 
 func out(w http.ResponseWriter, format string, a ...any) {

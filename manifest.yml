@@ -1,6 +1,6 @@
 ---
 applications:
-- name: golang-cf-app2
+- name: golang-cf-app
   instances: 1
   memory: 64MB
   buildpacks:
